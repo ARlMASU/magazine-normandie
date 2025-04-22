@@ -6,8 +6,10 @@ import Timeline from "./components/Timeline/Timeline";
 import simonGronwskiPostImage from "./assets/images/postsImages/simonGronowski.jpg";
 
 export default function App() {
+	let timelineWidth;
+
 	return (
-		<main className={styles.wrapperAll}>
+		<main className={styles.app}>
 			<Post
 				src={simonGronwskiPostImage}
 				alt="Temoignage de Simon Gronowski"

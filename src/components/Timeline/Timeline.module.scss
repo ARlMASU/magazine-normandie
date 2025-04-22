@@ -1,11 +1,7 @@
-.wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-	& .line {
-		height: 120px;
-		width: 8px;
-		background: var(--primary);
-	}
+.timeline {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	gap: 3rem;
 }
