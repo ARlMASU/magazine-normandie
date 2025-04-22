@@ -6,11 +6,11 @@ import simonGronwskiPostImage from "./assets/images/postsImages/simonGronowski.j
 
 export default function App() {
 	return (
-		<>
-			<Post src={simonGronwskiPostImage} alt="Temoignage de Simon Gronowski">
+		<main className={styles.wrapperAll}>
+			<Post src={simonGronwskiPostImage} alt="Temoignage de Simon Gronowski" className={styles.post}>
 				Simon Gronowski, rescapé de la déportation, à St-Michel, pour un
 				témoignage bouleversant.
 			</Post>
-		</>
+		</main>
 	);
 }

@@ -10,7 +10,7 @@ export default function Post({ src, alt, children }) {
 			<img src={src} alt={alt} className={styles.image} />
 			<div className={styles.textNButtonWrapper}>
 				<p className={styles.text}>{children}</p>
-				<div className={styles.wrapperButton}>
+				<div className={styles.buttonWrapper}>
 					<Button src={arrowRight} alt="Arrow right">
 						En savoir plus
 					</Button>

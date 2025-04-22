@@ -1,20 +1,29 @@
 .button {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background: var(--primary);
-	border: none;
-	outline: none;
-	padding: 8px 12px 8px 8px;
-	border-radius: .75rem;
-	& .img {
-		display: flex;
-		width: 24px;
-	}
-	& .text {
-		margin: 0;
-		color: var(--on-primary);
-		text-align: center;
-		font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary);
+	transition: background .1s ease-in-out;
+  border: none;
+  outline: none;
+  padding: 8px 12px 8px 8px;
+  border-radius: 0.75rem;
+  & .img {
+    display: flex;
+    width: 24px;
+  }
+  & .text {
+    margin: 0;
+    color: var(--on-primary);
+    text-align: center;
+    font-weight: 600;
+  }
+  &:hover {
+    cursor: pointer;
+    background: var(--primary-hover);
+		
+  }
+	&:active{
+		background: var(--primary-active);
 	}
 }
