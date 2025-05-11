@@ -20,8 +20,8 @@ export default function Timeline({}) {
 	}
 
 	return (
-		<div className={styles.timeline} ref={timelineRef} onScroll={handleDistanceFromCenter()}>
-			<Line width={8} height={120} opacity={1} ref={lineRef}></Line>
+		<div className={styles.timeline} ref={timelineRef} onScroll={handleDistanceFromCenter}>
+			<Line width={8} height={120} opacity={1}></Line>
 		</div>
 	);
 }
