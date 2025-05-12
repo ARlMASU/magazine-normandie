@@ -1,0 +1,10 @@
+.classAndOption {
+	display: flex;
+	padding: 4px 12px;
+	background: var(--surface-2);
+	border-radius: .6rem;
+	&__text {
+		font-size: 0.875rem;
+		color: var(--on-surface-0);
+	}
+}

@@ -14,9 +14,9 @@ export default function App() {
 				src={simonGronwskiPostImage}
 				alt="Temoignage de Simon Gronowski"
 				className={styles.post}
+				date="24->26 mars 2025"
 			>
-				Simon Gronowski, rescapé de la déportation, à St-Michel, pour un
-				témoignage bouleversant.
+				Témoignage de Simon Gronowski
 			</Post>
 			<Timeline></Timeline>
 		</main>
