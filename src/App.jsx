@@ -5,6 +5,8 @@ import Timeline from "./components/Timeline/Timeline";
 
 import simonGronwskiPostImage from "./assets/images/postsImages/simonGronowski.jpg";
 
+const classesAndOptions = ["1e", "2e", "3e", "4e", "5e", "6e"];
+
 export default function App() {
 	let timelineWidth;
 
@@ -15,6 +17,7 @@ export default function App() {
 				alt="Temoignage de Simon Gronowski"
 				className={styles.post}
 				date="24->26 mars 2025"
+				classesAndOptions={classesAndOptions}
 			>
 				Témoignage de Simon Gronowski
 			</Post>

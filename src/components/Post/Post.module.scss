@@ -25,7 +25,7 @@
 			&_title {
 				font-size: 1.25rem;
 				font-weight: 600;
-        line-height: normal;
+				line-height: normal;
 				color: var(--on-surface-0);
 			}
 			&_date {
@@ -36,6 +36,11 @@
 		}
 
 		&_classesAndOptions {
+			width: 100%;
+			display: flex;
+			flex-flow: row;
+			gap: 0.25rem;
+			align-items: start;
 		}
 		&_button {
 			display: flex;

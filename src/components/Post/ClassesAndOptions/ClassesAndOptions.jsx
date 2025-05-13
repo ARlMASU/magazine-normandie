@@ -4,5 +4,7 @@ import ClassAndOption from "./ClassAndOption/ClassAndOption";
 
 export default function ClassAndOptions({ children }) {
     
-	return <div></div>;
+	return <div>
+		
+	</div>;
 }
