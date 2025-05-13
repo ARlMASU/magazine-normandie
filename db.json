@@ -1,0 +1,16 @@
+{
+	"Posts": {
+		"Temoignage-de-Simon-Gronowski": {
+			"src": "images/postsImages/Temoignage-de-Simon-Gronowski",
+			"alt": "Témoignage de Simon Gronowski",
+			"date": "24->26 mars 2025",
+			"classesAndOptions": ["1e", "2e", "3e", "4e", "5e", "6e"]
+		},
+		"": {
+			"src": "",
+			"alt": "",
+			"date": "",
+			"classesAndOptions": ["", ""]
+		}
+	}
+}

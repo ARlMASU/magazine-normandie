@@ -3,7 +3,7 @@ import styles from "./App.module.scss";
 import Post from "./components/Post/Post";
 import Timeline from "./components/Timeline/Timeline";
 
-import simonGronwskiPostImage from "./assets/images/postsImages/simonGronowski.jpg";
+import simonGronwskiPostImage from "./assets/images/postsImages/Temoignage-de-Simon-Gronowski.png";
 
 const classesAndOptions = ["1e", "2e", "3e", "4e", "5e", "6e"];
 
