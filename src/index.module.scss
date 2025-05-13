@@ -21,9 +21,14 @@ body {
   max-width: 100vw;
   min-height: 100vh;
   background: var(--surface-0);
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root{
+  max-width: 100vw;
+  min-height: 100vh;
 }
 
 *,

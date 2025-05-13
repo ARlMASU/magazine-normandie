@@ -1,0 +1,64 @@
+{
+  "posts": [
+    {
+      "title": "“Chat and snack”",
+      "src": "Chat-and-snack.png",
+      "date": "08 octobre 2024",
+      "filters": ["3e", "Immersion"]
+    },
+    {
+      "title": "Découverte de “The duty of remembrance”",
+      "src": "Decourverte-de-The-duty-of-remembrance.png",
+      "date": "12 octobre 2024",
+      "filters": ["1e", "Immersion"]
+    },
+    {
+      "title": "Jeu de piste sur la guerre 14-18",
+      "src": "Jeu-de-piste-sur-la-guerre-14-18.png",
+      "date": "07 novembre 2024",
+      "filters": ["1e", "2e"]
+    },
+    {
+      "title": "Visite du Bastogne War museum",
+      "src": "Visite-du-Bastogne-War-museum.png",
+      "date": "08 novembre 2024",
+      "filters": ["3e", "4e"]
+    },
+    {
+      "title": "Visite du Fort de Battice",
+      "src": "Visite-du-Fort-de-Battice.png",
+      "date": "12 novembre 2024",
+      "filters": ["2e"]
+    },
+    {
+      "title": "Visite du musée “Territoire de la mémoire”",
+      "src": "Visite-du-musee-Territoire-de-la-memoire.png",
+      "date": "03 décembre 2024",
+      "filters": ["4e", "Comptabilité"]
+    },
+    {
+      "title": "Visite du fort d'Eben Emael",
+      "src": "Visite-du-fort-d-Eben-Emael.png",
+      "date": "12 février 2025",
+      "filters": ["2e"]
+    },
+    {
+      "title": "Escape game sur le débarquement en Normandie",
+      "src": "Escape-game-sur le-debarquement-en-Normandie.png",
+      "date": "22 février 2025",
+      "filters": ["3e", "4e"]
+    },
+    {
+      "title": "Témoignage de Simon Gronowski",
+      "src": "Temoignage-de-Simon-Gronowski.png",
+      "date": "24->26 mars 2025",
+      "filters": ["1e", "2e", "3e", "4e", "5e", "6e"]
+    },
+    {
+      "title": "Voyage en Normandie",
+      "src": "Voyage-en-Normandie.png",
+      "date": "26->28 mars 2025",
+      "filters": ["4e", "Animation"]
+    }
+  ]
+}

@@ -1,9 +1,19 @@
 .app {
-	display: flex;
-	flex-flow: column;
-  gap: 1rem;
-	width: 100%;
-	justify-content: center;
-	align-items: center;
-	padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // width: 100vw;
+  padding: 16rem;
+  &__posts {
+    width: 100%;
+    // max-width: calc(312 * 3 + 24 * 2) px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+    
+    // display: grid;
+    // grid-template-columns: repeat(auto-fill, minmax(312px, 1fr));
+    gap: 1.5rem;
+  }
 }
