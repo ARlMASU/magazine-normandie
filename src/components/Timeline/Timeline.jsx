@@ -15,12 +15,9 @@ export default function Timeline({}) {
 		}
 	}, [timelineRef]);
 
-	function handleDistanceFromCenter() {
-		return createElement(Line, { width: 8, height: 120, opacity: 1 });
-	}
 
 	return (
-		<div className={styles.timeline} ref={timelineRef} onScroll={handleDistanceFromCenter}>
+		<div className={styles.timeline} ref={timelineRef}>
 			<Line width={8} height={120} opacity={1}></Line>
 		</div>
 	);

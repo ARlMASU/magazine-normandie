@@ -2,19 +2,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--primary);
   transition: background 0.1s ease-in-out;
   border: none;
   outline: none;
-  padding: 8px 12px 8px 8px;
+  padding: 0.5rem 1rem 0.5rem 1rem;
   border-radius: 0.75rem;
-  width: 100%;
-  gap: 4px;
-  & .img {
+  gap: .25rem;
+  &__img {
     height: 100%;
   }
-  & .text {
-    color: var(--on-primary);
+  &__text {
     font-weight: 600;
     font-size: 1.125rem;
   }

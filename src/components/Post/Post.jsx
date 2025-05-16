@@ -23,6 +23,9 @@ export default function Post({ src, alt, children, date, filters }) {
           className={styles.post__main_button}
           src={arrowRight}
           alt="Arrow right"
+          bg="primary"
+          color="on-primary"
+          fillContainer
         >
           En savoir plus
         </Button>
