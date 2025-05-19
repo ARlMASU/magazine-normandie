@@ -30,7 +30,7 @@ export default function Button({
           src={src}
           alt={alt}
           className={styles.button__img}
-          style={{ fill: `var(--${color})`, height: `${fontSize*1.25}rem` }}
+          style={{ fill: `var(--${color})`, height: `${fontSize * 1.25}rem` }}
         />
       )}
       {children && (
