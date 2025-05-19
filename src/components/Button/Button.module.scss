@@ -17,9 +17,9 @@
   }
   &:hover {
     cursor: pointer;
-    background: var(--primary-hover);
+    // background: var(--primary-hover) !important;
   }
   &:active {
-    background: var(--primary-active);
+    // background: var(--primary-active) !important;
   }
 }
