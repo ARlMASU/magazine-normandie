@@ -7,56 +7,56 @@ export default function Button({
 	onClick,
 	src,
 	alt,
-	bg,
-	bgHover,
-	bgActive,
 	color,
 	bora,
 	fontSize,
 	paddingTopBottom,
 	fillContainer,
+	bg,
+	bgHover,
+	bgActive,
 }) {
-	const [isHovered, setIsHovered] = useState(false);
-	const [isActive, setIsActive] = useState(false);
-
-	const handleMouseEnter = () => {
-		setIsHovered(true);
-	};
-	const handleMouseLeave = () => {
-		setIsHovered(false);
-	};
+	const [mouseIsDown, setMouseIsDown] = useState(false);
+	const [mouseIsHovering, setMouseIsHovering] = useState(false);
 
 	const handleMouseDown = () => {
-		setIsActive(true);
+		setMouseIsDown(true);
 	};
 
 	const handleMouseUp = () => {
-		setIsActive(false);
+		setMouseIsDown(false);
 	};
 
-	css.setClass(".hovered", {
-		background: `var(--${bgHover})`, //if button is hovered change the background
-	});
+	const handleMouseEnter = () => {
+		setMouseIsHovering(true);
+	};
 
-	css.setClass(".active", {
-		background: `var(--${bgActive})`, //if button is active change the background
-	});
-
+	const handleMouseLeave = () => {
+		setMouseIsHovering(false);
+	};
 	return (
 		<button
-			onClick={onClick}
-			className={styles.button}
-			onMouseEnter={handleMouseEnter}
-			onMouseLeave={handleMouseLeave}
 			onMouseDown={handleMouseDown}
 			onMouseUp={handleMouseUp}
+			onMouseEnter={handleMouseEnter}
+			onMouseLeave={handleMouseLeave}
+			onClick={onClick}
+			className={styles.button}
 			style={{
 				paddingRight: src && "1.25rem", //if src exist, put paddingRight to 1.25rem
 				paddingTop: `${paddingTopBottom}rem`,
 				paddingBottom: `${paddingTopBottom}rem`,
-				background: `var(--${bg})`,
 				borderRadius: `${bora}rem`,
 				width: fillContainer && "100%", //if fillContainer exist, put width to 100%
+				// background: `var(--${bg})`,
+				background: mouseIsDown
+					? `var(--${bgActive})`
+					: mouseIsHovering
+					? `var(--${bgHover})`
+					: `var(--${bg})`,
+				// if mouseIsDown returns true, show bgActive's color,
+				// if not, if mouseIsHovering returns true, show bgHover's color,
+				// if not, show bg's color
 			}}
 		>
 			{src && (

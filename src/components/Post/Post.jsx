@@ -23,11 +23,11 @@ export default function Post({ src, alt, children, date, filters }) {
 					className={styles.post__main_button}
 					src={arrowRight}
 					alt="Arrow right"
+					color="on-primary"
+					fillContainer
 					bg="primary"
 					bgHover="primary-hover"
 					bgActive="primary-active"
-					color="on-primary"
-					fillContainer
 				>
 					En savoir plus
 				</Button>

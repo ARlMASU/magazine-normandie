@@ -14,13 +14,13 @@ export default function Archives() {
 				<Button
 					src={FiltersIcon}
 					alt="Filtres"
-					bg="primary-variant"
-					bgHover="primary-variant-hover"
-					bgActive="primary-variant-active"
 					color="primary"
 					bora={1}
 					fontSize={1.25}
 					paddingTopBottom={0.75}
+					bg="primary-variant"
+					bgHover="primary-variant-hover"
+					bgActive="primary-variant-active"
 				>
 					Filtres
 				</Button>
