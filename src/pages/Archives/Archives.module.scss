@@ -18,9 +18,10 @@
     display: flex;
     justify-content: center;
     width: 100vw;
-    height: 85vh;
-    overflow: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
+    padding-bottom: 4rem;
+    // height: calc(100vh - 8rem);
     &__posts {
       display: grid;
       justify-content: center;
@@ -28,6 +29,10 @@
       padding-top: 0;
       gap: 1.5rem;
       grid-template-columns: 1fr;
+      &__bottomSpacer {
+        height: 4rem;
+        grid-column: 1 / -1;
+      }
     }
   }
 }
