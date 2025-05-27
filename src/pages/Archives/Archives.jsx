@@ -29,7 +29,7 @@ export default function Archives() {
           {...(selectedPost.details.length < 280 ? { smallText: true } : {})}
         >
           <PostDetails
-            src={`../../../public/images/postsDetailsImages/${selectedPost.src}`}
+            src={`/images/postsDetailsImages/${selectedPost.src}`}
             title={selectedPost.title}
             date={selectedPost.date}
             filters={selectedPost.filters}
@@ -61,7 +61,7 @@ export default function Archives() {
             <Post
               key={post.id}
               className={styles.post}
-              src={`../../../public/images/postsImages/${post.src}`}
+              src={`/images/postsImages/${post.src}`}
               date={post.date}
               filters={post.filters}
               onClick={() => handleOpenPostDetails(post.id)}
