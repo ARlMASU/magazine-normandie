@@ -5,7 +5,7 @@ import Filter from "../Filter/Filter";
 
 import closeIcon from "@/src/assets/images/icons/close.svg";
 
-// import { useState, useEffect } from "react";
+import { useState, useRef } from "react";
 
 export default function PostDetails({
   src,
@@ -15,11 +15,11 @@ export default function PostDetails({
   filters,
   onClick,
 }) {
+  const [isLoading, setIsLoading] = useState(true);
+  const placeholderRef = useRef(null);
+
   return (
-    <div
-      className={styles.postDetails}
-      // style={{ height: numberOfLine <= 2 && "100%" }}
-    >
+    <div className={styles.postDetails}>
       <div className={styles.postDetails__buttonWrap}>
         <Button
           src={closeIcon}
@@ -33,7 +33,14 @@ export default function PostDetails({
           className={styles.postDetails__buttonWrap_button}
         ></Button>
       </div>
-      <img src={src} alt={title} className={styles.postDetails__image} />
+      {isLoading && <p ref={placeholderRef}>Loading...</p>}
+      <img
+        src={src}
+        alt={title}
+        className={styles.postDetails__image}
+        style={{ display: isLoading && "none" }}
+        onLoad={() => setIsLoading(false)}
+      />
       <div className={styles.postDetails__postInfo}>
         <h1 className={styles.postDetails__postInfo_title}>{title}</h1>
         <h2 className={styles.postDetails__postInfo_date}>{date}</h2>

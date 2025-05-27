@@ -26,6 +26,11 @@
   transform: translate(-50%, 0);
   z-index: 150;
   animation: moveIn 0.4s ease forwards;
+  padding-bottom: 0;
+  &_smallText {
+    top: auto;
+    bottom: 0;
+  }
 }
 
 @keyframes moveIn {
@@ -37,30 +42,16 @@
   }
 }
 
-@media (min-width: 0px) {
-  .backdrop {
-    // height: 100%;
-  }
-  .modal {
-    // top: auto;
-    // bottom: 0;
-    padding-bottom: 0;
-    // height: 80%;
-  }
-}
-
-@media (min-width: 480px) {
-  .backdrop {
-    // height: 135%;
-  }
+@media (min-width: 768px) {
   .modal {
     padding-bottom: 8rem;
-    // height: auto;
+    // &_smallText {
+    //   top: 0;
+    //   bottom: auto;
+    // }
   }
-}
-
-@media (min-width: 768px) {
-  .backdrop {
-    // height: 150%;
+  .modal_smallText{
+      top: 20vh;
+      bottom: unset;
   }
 }
