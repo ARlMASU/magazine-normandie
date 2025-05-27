@@ -45,13 +45,9 @@
 @media (min-width: 768px) {
   .modal {
     padding-bottom: 8rem;
-    // &_smallText {
-    //   top: 0;
-    //   bottom: auto;
-    // }
-  }
-  .modal_smallText{
+    &_smallText {
       top: 20vh;
       bottom: unset;
+    }
   }
 }
