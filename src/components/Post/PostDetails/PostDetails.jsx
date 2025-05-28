@@ -33,7 +33,15 @@ export default function PostDetails({
           className={styles.postDetails__buttonWrap_button}
         ></Button>
       </div>
-      {isLoading && <p ref={placeholderRef}>Loading...</p>}
+      {isLoading && (
+        <div ref={placeholderRef} className={styles.postDetails__imageLoading}>
+          <div className={styles.postDetails__imageLoading__loader}>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      )}
       <img
         src={src}
         alt={title}
