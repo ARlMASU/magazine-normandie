@@ -1,63 +1,80 @@
 .archives {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 3rem;
-  gap: 2rem;
-  width: 100%;
-  height: 100vh;
-  &__modal {
-    height: 100%;
-  }
-  &__filtersButton {
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
-    padding: 0 4rem;
-    max-width: 447px;
-  }
-  &__postsWrapper {
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    scrollbar-gutter: stable;
-    padding-bottom: 4rem;
-    &__posts {
-      display: grid;
-      justify-content: center;
-      padding: 4rem;
-      padding-top: 0;
-      gap: 1.5rem;
-      grid-template-columns: 1fr;
-      &__bottomSpacer {
-        height: 4rem;
-        grid-column: 1 / -1;
-      }
-    }
-  }
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 3rem;
+	gap: 2rem;
+	width: 100%;
+	height: 100vh;
+	&__modal {
+		height: 100%;
+	}
+	&__filtersButton {
+		position: absolute;
+		bottom: 4rem;
+		right: 4rem;
+		z-index: 100;
+		& button {
+		}
+		& p {
+			display: none;
+		}
+	}
+	&__postsWrapper {
+		display: flex;
+		justify-content: center;
+		width: 100vw;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		scrollbar-gutter: stable;
+		padding-bottom: 4rem;
+		&__posts {
+			display: grid;
+			justify-content: center;
+			padding: 4rem;
+			padding-top: 0;
+			gap: 1.5rem;
+			grid-template-columns: 1fr;
+			&__bottomSpacer {
+				height: 4rem;
+				grid-column: 1 / -1;
+			}
+		}
+	}
 }
 
 @media (min-width: 776px) {
-  .archives {
-    &__filtersButton {
-      max-width: 776px;
-    }
-    &__postsWrapper__posts {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
+	.archives {
+		&__filtersButton {
+			max-width: 776px;
+		}
+		&__filtersButton {
+			position: relative;
+			display: flex;
+			justify-content: flex-start;
+			width: 100%;
+			padding: 0 4rem;
+			bottom: unset;
+			right: unset;
+			z-index: unset;
+			& p {
+				display: inline-flex;
+			}
+		}
+		&__postsWrapper__posts {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
 }
 
 @media (min-width: 1120px) {
-  .archives {
-    &__filtersButton {
-      max-width: 1120px;
-    }
-    &__postsWrapper__posts {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
+	.archives {
+		&__filtersButton {
+			max-width: 1120px;
+		}
+		&__postsWrapper__posts {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
 }
