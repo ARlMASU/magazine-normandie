@@ -93,6 +93,13 @@
       font-weight: normal;
     }
   }
+  &__links{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: start;
+    align-items: center;
+    gap: .5rem;
+  }
 }
 
 @media (min-width: 420px) {

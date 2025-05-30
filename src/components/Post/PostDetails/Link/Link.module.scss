@@ -1,0 +1,39 @@
+.link {
+  display: inline-flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  background: var(--surface-2);
+  transition: all 0.2s ease;
+  &__img {
+    height: calc(1rem * 1.125);
+  }
+  &__p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--on-surface-0);
+    text-wrap: stable;
+  }
+  &:hover {
+    background: var(--surface-3);
+    padding: 0.5rem 1.5rem;
+  }
+  &:active {
+    background: var(--surface-2);
+  }
+}
+
+@media (min-width: 768px) {
+  .link {
+    &__img {
+      height: calc(1.125rem * 1.125);
+    }
+    &__p {
+      font-size: 1.125rem;
+    }
+  }
+}

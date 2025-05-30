@@ -2,6 +2,7 @@ import styles from "./PostDetails.module.scss";
 
 import Button from "../../Button/Button";
 import Filter from "../Filter/Filter";
+import Link from "./Link/Link";
 
 import closeIcon from "@/src/assets/images/icons/close.svg";
 
@@ -13,6 +14,7 @@ export default function PostDetails({
   children,
   date,
   filters,
+  links,
   onClick,
 }) {
   const [isLoading, setIsLoading] = useState(true);
@@ -20,7 +22,7 @@ export default function PostDetails({
 
   return (
     <div className={styles.postDetails}>
-      <div className={styles.postDetails__buttonWrap}>
+      <section className={styles.postDetails__buttonWrap}>
         <Button
           src={closeIcon}
           alt="Close"
@@ -32,7 +34,7 @@ export default function PostDetails({
           onClick={onClick}
           className={styles.postDetails__buttonWrap_button}
         ></Button>
-      </div>
+      </section>
       {isLoading && (
         <div ref={placeholderRef} className={styles.postDetails__imageLoading}>
           <div className={styles.postDetails__imageLoading__loader}>
@@ -49,7 +51,7 @@ export default function PostDetails({
         style={{ display: isLoading && "none" }}
         onLoad={() => setIsLoading(false)}
       />
-      <div className={styles.postDetails__postInfo}>
+      <section className={styles.postDetails__postInfo}>
         <h1 className={styles.postDetails__postInfo_title}>{title}</h1>
         <h2 className={styles.postDetails__postInfo_date}>{date}</h2>
         <div className={styles.postDetails__postInfo_filters} id="root">
@@ -59,7 +61,7 @@ export default function PostDetails({
             </Filter>
           ))}
         </div>
-      </div>
+      </section>
       <p className={styles.postDetails__detailsText}>
         {children.split("\n").map((line, index) => (
           <span key={index} className={styles.postDetails__detailsText_span}>
@@ -68,6 +70,22 @@ export default function PostDetails({
           </span>
         ))}
       </p>
+      <section className={styles.postDetails__links}>
+        {links.map((link, key) => {
+          const srcName = link.text.split(" ")[0].toLowerCase();
+          return (
+            <Link
+              key={key}
+              href={link.href}
+              src={`/images/linksIcons/${srcName}.svg`}
+              // src={facebookIcon}
+              alt={link.text}
+            >
+              {link.text}
+            </Link>
+          );
+        })}
+      </section>
     </div>
   );
 }
