@@ -67,7 +67,7 @@ export default function Button({
           src={src}
           alt={alt}
           className={styles.button__img}
-          style={{ height: `${fontSize * 1.25}rem` }}
+          style={{ height: `${fontSize * 1.125}rem` }}
         />
       )}
       {children && (

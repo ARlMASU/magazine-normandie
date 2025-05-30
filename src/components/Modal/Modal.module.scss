@@ -23,11 +23,12 @@
   position: absolute;
   top: 20vh;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translateX(-50%);
   z-index: 150;
   animation: moveIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
   padding-bottom: 0;
-  &_smallText {
+  &_smallText,
+  &_filtersMenu {
     top: auto;
     bottom: 0;
   }
@@ -44,7 +45,10 @@
 
 @media (min-width: 768px) {
   .modal {
-    padding-bottom: 8rem;
+    &:not(.modal_filtersMenu) {
+      padding-bottom: 8rem;
+    }
+
     &_smallText {
       top: 20vh;
       bottom: unset;

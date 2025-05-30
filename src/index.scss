@@ -34,14 +34,24 @@ body {
   padding: 0;
   box-sizing: border-box;
 
-  scrollbar-gutter: stable both-edges;
+  scrollbar-gutter: stable;
 }
 
 p {
   font-family: "Inter";
+  font-weight: 500;
 }
 
 button p {
   font-weight: 600;
   font-size: 1rem;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+h2{
+  font-size: 1.5rem;
+  font-weight: 500;
 }

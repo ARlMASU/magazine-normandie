@@ -5,9 +5,9 @@ import Filter from "./Filter/Filter";
 
 import arrowRight from "../../assets/images/icons/arrow_right.svg";
 
-export default function Post({ src, children, date, filters, onClick }) {
+export default function Post({ src, children, date, filters, onClick, animationDelay}) {
 	return (
-		<div className={styles.post}>
+		<div className={styles.post} style={{animationDelay: `${animationDelay}s`}}>
 			<img
 				src={src}
 				alt={children}
