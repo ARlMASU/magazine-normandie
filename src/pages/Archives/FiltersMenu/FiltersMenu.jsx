@@ -82,7 +82,9 @@ export default function FiltersMenu({
             {data.filters.options.map((option, key) => (
               <FilterSelectionButton
                 key={key}
-                onClick={() => handleClick("options", option)}
+                onClick={() =>
+                  handleFilterSelectionButtonClick("options", option)
+                }
                 isSelected={selectedFilters.options.has(option)}
               >
                 {option}
