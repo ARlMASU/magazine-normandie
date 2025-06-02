@@ -10,7 +10,7 @@ import filtersIcon from "@/src/assets/images/icons/filters.svg";
 
 export default function FiltersMenu({
   onClick,
-  handleClick,
+  handleFilterSelectionButtonClick,
   selectedFilters,
   handleReset,
   noFiltersSelected,
@@ -62,7 +62,9 @@ export default function FiltersMenu({
             {data.filters.classes.map((classItem, key) => (
               <FilterSelectionButton
                 key={key}
-                onClick={() => handleClick("classes", classItem)}
+                onClick={() =>
+                  handleFilterSelectionButtonClick("classes", classItem)
+                }
                 isSelected={selectedFilters.classes.has(classItem)}
               >
                 {classItem}

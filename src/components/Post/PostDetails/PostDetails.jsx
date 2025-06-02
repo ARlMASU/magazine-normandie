@@ -3,6 +3,7 @@ import styles from "./PostDetails.module.scss";
 import Button from "../../Button/Button";
 import Filter from "../Filter/Filter";
 import Link from "./Link/Link";
+import Loader from "../Loader/Loader";
 
 import closeIcon from "@/src/assets/images/icons/close.svg";
 
@@ -37,11 +38,7 @@ export default function PostDetails({
       </section>
       {isLoading && (
         <div ref={placeholderRef} className={styles.postDetails__imageLoading}>
-          <div className={styles.postDetails__imageLoading__loader}>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
+          <Loader />
         </div>
       )}
       <img
@@ -51,7 +48,7 @@ export default function PostDetails({
         style={{ display: isLoading && "none" }}
         onLoad={() => setIsLoading(false)}
       />
-      <section className={styles.postDetails__postInfo}>
+      <hgroup className={styles.postDetails__postInfo}>
         <h1 className={styles.postDetails__postInfo_title}>{title}</h1>
         <h2 className={styles.postDetails__postInfo_date}>{date}</h2>
         <div className={styles.postDetails__postInfo_filters} id="root">
@@ -61,7 +58,7 @@ export default function PostDetails({
             </Filter>
           ))}
         </div>
-      </section>
+      </hgroup>
       <p className={styles.postDetails__detailsText}>
         {children.split("\n").map((line, index) => (
           <span key={index} className={styles.postDetails__detailsText_span}>

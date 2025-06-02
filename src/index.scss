@@ -14,6 +14,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  scrollbar-gutter: stable;
+
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -27,16 +38,6 @@ body {
   overflow-x: hidden;
 }
 
-*,
-::before,
-::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-
-  scrollbar-gutter: stable;
-}
-
 p {
   font-family: "Inter";
   font-weight: 500;
@@ -47,11 +48,27 @@ button p {
   font-size: 1rem;
 }
 
+button:active, a:active {
+  animation: scaleDown 0.25s ease;
+}
+
+@keyframes scaleDown {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.98);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 h1 {
   font-weight: 500;
 }
 
-h2{
+h2 {
   font-size: 1.5rem;
   font-weight: 500;
 }

@@ -1,6 +1,6 @@
 import styles from "./Button.module.scss";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Button({
   children,
@@ -76,10 +76,10 @@ export default function Button({
         borderRadius: `${bora}rem`,
         width: fillContainer && "100%", // if fillContainer exist, put width to 100%
         background: mouseIsDown
-          ? `var(--${bgActive})`
+          ? bgActive && `var(--${bgActive})`
           : mouseIsHovering
-          ? `var(--${bgHover})`
-          : `var(--${bg})`,
+          ? bgHover && `var(--${bgHover})`
+          : bgHover && `var(--${bg})`,
         // if mouseIsDown returns true, show bgActive's color,
         // if not, if mouseIsHovering returns true, show bgHover's color,
         // if not, show bg's color

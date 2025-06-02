@@ -1,32 +1,33 @@
-import styles from "./Post.module.scss";
+import styles from "./PostTimeline.module.scss";
 
-import Button from "../Button/Button";
-import Filter from "./Filter/Filter";
-import Loader from "./Loader/Loader";
+import Button from "../../Button/Button";
+import Filter from "../Filter/Filter";
+import Loader from "../Loader/Loader";
 
-import arrowIcon from "../../assets/images/icons/arrow.svg";
+import arrowIcon from "@/src/assets/images/icons/arrow.svg";
 
 import { useState, useRef } from "react";
 
 export default function Post({
   src,
   children,
-  date,
   filters,
   onClick,
   animationDelay,
-  noDate,
-  noAnimation,
+  animateOut,
+  animateIn,
 }) {
   const [isLoading, setIsLoading] = useState(true);
   const placeholderRef = useRef(null);
 
   return (
     <div
-      className={styles.post}
+      className={`${styles.post}
+      ${animateOut && styles.animateOut}
+      ${animateIn && styles.animateIn}
+      `}
       style={{
         animationDelay: `${animationDelay}s`,
-        animation: noAnimation && "none",
       }}
       onClick={onClick}
     >
@@ -43,7 +44,6 @@ export default function Post({
       <div className={styles.post__main}>
         <div className={styles.post__main_text}>
           <p className={styles.post__main_text_title}>{children}</p>
-          {!noDate && <p className={styles.post__main_text_date}>{date}</p>}
         </div>
         <div className={styles.post__main_filters} id="root">
           {filters.map((filter, id) => (

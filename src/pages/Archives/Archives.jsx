@@ -10,9 +10,9 @@ import FiltersMenu from "./FiltersMenu/FiltersMenu";
 
 import filtersIcon from "@/src/assets/images/icons/filters.svg";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-export default function Archives({ windowWidth }) {
+export default function Archives() {
   const [openPostDetails, setOpenPostDetails] = useState(false);
   const [selectedPost, setSelectedPost] = useState(null);
 
@@ -35,6 +35,8 @@ export default function Archives({ windowWidth }) {
     setOpenFiltersMenu(false);
   };
 
+  ////////////////////////////
+
   const [selectedFilters, setSelectedFilters] = useState({
     classes: new Set(),
     options: new Set(),
@@ -43,7 +45,7 @@ export default function Archives({ windowWidth }) {
   const noFiltersSelected =
     selectedFilters.classes.size === 0 && selectedFilters.options.size === 0;
 
-  const handleClick = (section, filter) => {
+  const handleFilterSelectionButtonClick = (section, filter) => {
     setSelectedFilters((prev) => {
       const updated = new Set(prev[section]);
       if (updated.has(filter)) {
@@ -62,17 +64,26 @@ export default function Archives({ windowWidth }) {
     });
   };
 
+  ////////////////////////////
+
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleWindowResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleWindowResize);
+    return () => window.removeEventListener("resize", handleWindowResize);
+  }, []);
+
   return (
     <div className={styles.archives}>
+      {!openPostDetails && (
+        <div className={styles.archives__navGradientBg}></div>
+      )}
       {filtersMenu && (
-        <Modal
-          onClick={handleCloseFiltersMenu}
-          className={styles.archives__modal}
-          filtersMenu
-        >
+        <Modal onClick={handleCloseFiltersMenu} filtersMenu>
           <FiltersMenu
             onClick={handleCloseFiltersMenu}
-            handleClick={handleClick}
+            handleFilterSelectionButtonClick={handleFilterSelectionButtonClick}
             selectedFilters={selectedFilters}
             noFiltersSelected={noFiltersSelected}
             handleReset={handleReset}
@@ -91,7 +102,6 @@ export default function Archives({ windowWidth }) {
             date={selectedPost.date}
             filters={selectedPost.filters}
             links={selectedPost.links}
-            className={styles.archives__postDetails}
             onClick={handleClosePostDetails}
           >
             {selectedPost.details}
@@ -103,17 +113,17 @@ export default function Archives({ windowWidth }) {
           src={filtersIcon}
           alt="Filtres"
           color="primary"
-          bora={windowWidth >= 776 ? 1 : 1.5}
-          fontSize={windowWidth >= 776 ? 1.25 : 2}
-          paddingTopBottom={windowWidth >= 776 ? 0.75 : 1}
-          paddingRight={windowWidth < 776 ? 1 : 1}
-          paddingLeft={windowWidth < 776 ? 1 : 1}
+          bora={windowWidth >= 775.5 ? 1 : 1.25}
+          fontSize={windowWidth >= 775.5 ? 1.25 : 1.5}
+          paddingTopBottom={windowWidth >= 775.5 ? 0.75 : 1}
+          paddingRight={windowWidth >= 775.5 ? 0.75 : 1}
+          paddingLeft={windowWidth >= 775.5 ? 0.75 : 1}
           bg="primary-variant"
           bgHover="primary-variant-hover"
           bgActive="primary-variant-active"
           onClick={handleOpenFiltersMenu}
         >
-          {windowWidth >= 776 ? "Filtres" : null}
+          {windowWidth >= 775.5 ? "Filtres" : null}
         </Button>
       </div>
       <div className={styles.archives__postsWrapper}>
