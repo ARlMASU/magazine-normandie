@@ -5,6 +5,8 @@
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  width: 100%;
   gap: 2rem;
   &__posts {
     display: flex;
@@ -19,6 +21,7 @@
     }
     &__postWrapper {
       transform-origin: center bottom;
+
       &_periphery {
         scale: 0.8;
         opacity: 0.8;
@@ -32,7 +35,7 @@
       position: absolute;
       background: var(--primary);
       height: 4px;
-      width: 100%;
+      width: 100vw;
       left: 50%;
       transform: translateX(-50%);
       transition: all 0.4s ease;
@@ -103,7 +106,7 @@
       padding: 0.5rem 2rem;
       border-radius: 2rem;
       color: var(--surface-0);
-      font-family: "Special Gothic Expanded One";
+      font-family: "Special Gothic Expanded One", "Inter", sans-serif;
       font-size: 1.5rem;
     }
   }

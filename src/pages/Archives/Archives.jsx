@@ -116,8 +116,8 @@ export default function Archives() {
           bora={windowWidth >= 775.5 ? 1 : 1.25}
           fontSize={windowWidth >= 775.5 ? 1.25 : 1.5}
           paddingTopBottom={windowWidth >= 775.5 ? 0.75 : 1}
-          paddingRight={windowWidth >= 775.5 ? 0.75 : 1}
-          paddingLeft={windowWidth >= 775.5 ? 0.75 : 1}
+          paddingRight={1}
+          paddingLeft={1}
           bg="primary-variant"
           bgHover="primary-variant-hover"
           bgActive="primary-variant-active"
