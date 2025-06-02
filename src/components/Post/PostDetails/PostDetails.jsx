@@ -75,7 +75,6 @@ export default function PostDetails({
               key={key}
               href={link.href}
               src={`/images/linksIcons/${srcName}.svg`}
-              // src={facebookIcon}
               alt={link.text}
             >
               {link.text}
