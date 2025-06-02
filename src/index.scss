@@ -22,7 +22,6 @@
   box-sizing: border-box;
 
   scrollbar-gutter: stable;
-
 }
 
 body {
@@ -48,7 +47,8 @@ button p {
   font-size: 1rem;
 }
 
-button:active, a:active {
+button:active,
+a:active {
   animation: scaleDown 0.25s ease;
 }
 

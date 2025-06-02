@@ -5,7 +5,6 @@
   align-items: center;
   gap: 2rem;
   width: 100%;
-  height: 100vh;
   &__navGradientBg {
     position: absolute;
     bottom: 0;
@@ -25,7 +24,7 @@
   &__postsWrapper {
     display: flex;
     justify-content: center;
-    width: 99.25vw;
+    width: 100vw;
     overflow-y: visible;
     overflow-x: hidden;
     padding-bottom: 4rem;
