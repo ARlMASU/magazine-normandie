@@ -23,7 +23,7 @@
   position: absolute;
   top: 20vh;
   left: 50%;
-  transform: translateX(-51%);
+  transform: translateX(-50%);
   z-index: 150;
   animation: moveIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   padding-bottom: 0;
@@ -36,10 +36,10 @@
 
 @keyframes moveIn {
   from {
-    transform: translate(-51%, 85%);
+    transform: translate(-50%, 85%);
   }
   to {
-    transform: translate(-51%, 0);
+    transform: translate(-50%, 0);
   }
 }
 
