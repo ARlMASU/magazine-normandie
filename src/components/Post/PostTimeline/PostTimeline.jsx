@@ -39,6 +39,7 @@ export default function Post({
       <img
         src={src}
         className={styles.post__image}
+        style={{ display: isLoading && "none" }}
         onLoad={() => setIsLoading(false)}
       />
       <div className={styles.post__main}>

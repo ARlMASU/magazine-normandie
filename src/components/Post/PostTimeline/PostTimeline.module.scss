@@ -12,7 +12,8 @@
   &__imageLoading {
     width: 312px;
     height: 100%;
-    min-height: 120px;
+    min-height: 140px;
+    max-height: 200px;
     border-radius: 1.4rem;
     display: flex;
     justify-content: center;
