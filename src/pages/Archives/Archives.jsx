@@ -94,7 +94,7 @@ export default function Archives() {
         <Modal
           onClick={handleClosePostDetails}
           className={styles.archives__modal}
-          {...(selectedPost.details.length < 280 && { smallText: true })}
+          {...(selectedPost.details.length < 380 && { smallText: true })}
         >
           <PostDetails
             src={`/images/postsDetailsImages/${selectedPost.src}`}
@@ -113,9 +113,9 @@ export default function Archives() {
           src={filtersIcon}
           alt="Filtres"
           color="primary"
-          bora={windowWidth >= 775.5 ? 1 : 1.25}
-          fontSize={windowWidth >= 775.5 ? 1.25 : 1.5}
-          paddingTopBottom={windowWidth >= 775.5 ? 0.75 : 1}
+          bora={windowWidth >= 800 ? 1 : 1.25}
+          fontSize={windowWidth >= 800 ? 1.25 : 1.5}
+          paddingTopBottom={windowWidth >= 800 ? 0.75 : 1}
           paddingRight={1}
           paddingLeft={1}
           bg="primary-variant"
@@ -123,7 +123,7 @@ export default function Archives() {
           bgActive="primary-variant-active"
           onClick={handleOpenFiltersMenu}
         >
-          {windowWidth >= 775.5 ? "Filtres" : null}
+          {windowWidth >= 800 ? "Filtres" : null}
         </Button>
       </div>
       <div className={styles.archives__postsWrapper}>

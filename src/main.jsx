@@ -15,10 +15,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     children: [
-      {
-        path: "",
-        element: <Navigate to="/chronologie" replace />,
-      },
+      // {
+      //   path: "",
+      //   element: <Navigate to="/chronologie" replace />,
+      // },
       {
         path: "/chronologie",
         element: <Timeline />,

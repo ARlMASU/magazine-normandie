@@ -1,7 +1,7 @@
-export default function Landing(){
-  return(
-    <div>
-      
-    </div>
-  )
+import styles from "./Landing.module.scss";
+
+export default function Landing() {
+  return <div>
+    
+  </div>;
 }

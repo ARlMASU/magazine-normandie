@@ -7,9 +7,10 @@
   height: 100vh;
   height: 100dvh;
   gap: 2rem;
+  overflow-x: auto;
 
   &__navGradientBg {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     height: 12.5%;
@@ -27,7 +28,7 @@
   &__postsWrapper {
     display: flex;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     overflow-y: visible;
     overflow-x: hidden;
     padding-bottom: 4rem;
@@ -61,7 +62,7 @@
   }
 }
 
-@media (min-width: 776px) {
+@media (min-width: 800px) {
   .archives {
     padding-top: 3rem;
     &__filtersButton {

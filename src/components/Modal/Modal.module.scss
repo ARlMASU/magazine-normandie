@@ -8,7 +8,6 @@
   left: 0;
   opacity: 1;
   animation: fadeIn 0.2s ease forwards;
-  scrollbar-width: thin;
 }
 
 @keyframes fadeIn {
@@ -24,9 +23,9 @@
   position: absolute;
   top: 20vh;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-51%);
   z-index: 150;
-  animation: moveIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  animation: moveIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   padding-bottom: 0;
   &_smallText,
   &_filtersMenu {
@@ -37,10 +36,10 @@
 
 @keyframes moveIn {
   from {
-    transform: translate(-50%, 85%);
+    transform: translate(-51%, 85%);
   }
   to {
-    transform: translate(-50%, 0);
+    transform: translate(-51%, 0);
   }
 }
 
