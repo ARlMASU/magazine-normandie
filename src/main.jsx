@@ -5,14 +5,17 @@ import "./index.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Navigate } from "react-router-dom";
 
+import Landing from "./pages/Landing/Landing";
 import App from "./App.jsx";
-
 import Timeline from "./pages/Timeline/Timeline";
 import Archives from "./pages/Archives/Archives";
 
 const router = createBrowserRouter([
   {
     path: "/",
+    element: <Landing />,
+  },
+  {
     element: <App />,
     children: [
       // {

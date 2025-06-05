@@ -8,7 +8,10 @@ import Modal from "@/src/components/Modal/Modal";
 import PostDetails from "@/src/components/Post/PostDetails/PostDetails";
 import FiltersMenu from "./FiltersMenu/FiltersMenu";
 
+import logo from "@/src/assets/images/logo.svg";
 import filtersIcon from "@/src/assets/images/icons/filters.svg";
+
+import { Link } from "react-router-dom";
 
 import { useState, useEffect } from "react";
 
@@ -76,9 +79,10 @@ export default function Archives() {
 
   return (
     <div className={styles.archives}>
-      {!openPostDetails && (
-        <div className={styles.archives__navGradientBg}></div>
-      )}
+      <div
+        className={styles.archives__navGradientBg}
+        style={{ opacity: !openPostDetails && 1 }}
+      ></div>
       {filtersMenu && (
         <Modal onClick={handleCloseFiltersMenu} filtersMenu>
           <FiltersMenu
@@ -108,7 +112,14 @@ export default function Archives() {
           </PostDetails>
         </Modal>
       )}
-      <div className={styles.archives__filtersButton}>
+      <div className={styles.archives__filtersButtonWrap}>
+        <Link to="/" className={styles.archives__filtersButtonWrap__link}>
+          <img
+            src={logo}
+            alt="Logo"
+            className={styles.archives__filtersButtonWrap__link__logo}
+          />
+        </Link>
         <Button
           src={filtersIcon}
           alt="Filtres"
@@ -127,6 +138,15 @@ export default function Archives() {
         </Button>
       </div>
       <div className={styles.archives__postsWrapper}>
+        {windowWidth < 800 && (
+          <Link to="/" className={styles.archives__postsWrapper__link}>
+            <img
+              src={logo}
+              alt="Logo"
+              className={styles.archives__postsWrapper__link__logo}
+            />
+          </Link>
+        )}
         <div className={styles.archives__postsWrapper__posts}>
           {data.posts
             .toReversed()

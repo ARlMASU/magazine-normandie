@@ -15,8 +15,6 @@ export default function Post({
   filters,
   onClick,
   animationDelay,
-  noDate,
-  noAnimation,
 }) {
   const [isLoading, setIsLoading] = useState(true);
   const placeholderRef = useRef(null);
@@ -26,7 +24,6 @@ export default function Post({
       className={styles.post}
       style={{
         animationDelay: `${animationDelay}s`,
-        animation: noAnimation && "none",
       }}
       onClick={onClick}
     >
@@ -44,7 +41,7 @@ export default function Post({
       <div className={styles.post__main}>
         <div className={styles.post__main_text}>
           <p className={styles.post__main_text_title}>{children}</p>
-          {!noDate && <p className={styles.post__main_text_date}>{date}</p>}
+          <p className={styles.post__main_text_date}>{date}</p>
         </div>
         <div className={styles.post__main_filters} id="root">
           {filters.map((filter, id) => (

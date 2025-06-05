@@ -7,8 +7,10 @@ import Modal from "@/src/components/Modal/Modal";
 import PostDetails from "@/src/components/Post/PostDetails/PostDetails";
 
 import arrowIcon from "@/src/assets/images/icons/arrow_2.svg";
+import logo from "@/src/assets/images/logo.svg";
 
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Timeline() {
   const [openPostDetails, setOpenPostDetails] = useState(false);
@@ -92,6 +94,9 @@ export default function Timeline() {
           </PostDetails>
         </Modal>
       )}
+      <Link to="/" className={styles.timeline__link}>
+        <img src={logo} alt="Logo"  className={styles.timeline__link__logo}/>
+      </Link>
       <div className={styles.timeline__posts}>
         {index === 0 && <div className={styles.timeline__posts__placeholder} />}
         {data.posts

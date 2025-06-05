@@ -28,12 +28,13 @@ export default function FiltersMenu({
             Filtres
           </h1>
         </div>
-        <div className={styles.filtersMenu__header__buttonWrap}>
+        <div className={styles.filtersMenu__header__closeButtonWrap}>
           <Button
             src={closeIcon}
             alt="Close"
             bora={1}
             color="on-surface-1"
+            fontSize={2}
             bg="surface-2"
             bgHover="primary-variant-hover"
             bgActive="primary-variant-active"
@@ -48,7 +49,7 @@ export default function FiltersMenu({
             <h2 className={styles.filtersMenu__main__section__titleWrap__title}>
               Classes
             </h2>
-            {noFiltersSelected == false && (
+            {!noFiltersSelected && (
               <button
                 className={styles.filtersMenu__main__section__titleWrap__button}
                 onClick={handleReset}

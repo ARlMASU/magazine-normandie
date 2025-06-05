@@ -10,6 +10,7 @@ export default function Button({
   color,
   bora,
   fontSize,
+  gap,
   paddingTopBottom,
   paddingRight,
   paddingLeft,
@@ -17,6 +18,7 @@ export default function Button({
   bg,
   bgHover,
   bgActive,
+  reverse
 }) {
   const [mouseIsDown, setMouseIsDown] = useState(false);
   const [mouseIsHovering, setMouseIsHovering] = useState(false);
@@ -69,6 +71,7 @@ export default function Button({
       onClick={onClick}
       className={styles.button}
       style={{
+        gap: gap && `${gap}rem`,
         paddingRight: handlePaddingRight(),
         paddingLeft: handlePaddingLeft(),
         paddingTop: `${paddingTopBottom}rem`,
@@ -83,6 +86,7 @@ export default function Button({
         // if mouseIsDown returns true, show bgActive's color,
         // if not, if mouseIsHovering returns true, show bgHover's color,
         // if not, show bg's color
+        flexFlow: reverse && "row-reverse",
       }}
     >
       {src && (
