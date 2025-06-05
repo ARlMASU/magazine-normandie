@@ -7,6 +7,7 @@
   height: 100%;
   background: #010101;
   background: radial-gradient(at right top, #010101, #272727);
+  animation: fadeIn 0.4s ease;
   gap: 36px;
   padding: 0 2rem;
   &__logo {
@@ -43,6 +44,33 @@
     animation: moveIn 0.4s ease backwards;
     animation-delay: 0.4s;
   }
+  &__githubLink {
+    position: absolute;
+    bottom: 2rem;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    animation: moveIn 0.4s ease backwards;
+    animation-delay: 0.5s;
+
+    &__logo {
+      height: calc(1.25rem * 1.125);
+    }
+    &__text {
+      font-size: 1.25rem;
+      color: var(--on-surface-0);
+    }
+    transition: all 0.2s ease;
+    &:hover {
+      opacity: 0.8;
+    }
+    &:active {
+      opacity: 0.6;
+    }
+  }
 }
 
 @keyframes moveIn {
@@ -53,6 +81,15 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    background: #000;
+  }
+  to {
+    background: radial-gradient(at right top, #010101, #272727);
   }
 }
 

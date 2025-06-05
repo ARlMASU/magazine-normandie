@@ -4,6 +4,7 @@ import Button from "@/src/components/Button/Button";
 
 import logo from "@/src/assets/images/logo.svg";
 import arrowIcon from "@/src/assets/images/icons/arrow.svg";
+import githubIcon from "@/src/assets/images/github.svg";
 
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -49,6 +50,18 @@ export default function Landing({}) {
           Découvrir
         </Button>
       </Link>
+      <a
+        href="https://github.com/ARlMASU/magazine-normandie.git"
+        target="_blank"
+        className={styles.landing__githubLink}
+      >
+        <img
+          src={githubIcon}
+          alt="Github"
+          className={styles.landing__githubLink__logo}
+        />
+        <p className={styles.landing__githubLink__text}>Github</p>
+      </a>
     </div>
   );
 }

@@ -4,22 +4,23 @@
   display: flex;
   flex-flow: column;
   justify-content: start;
+  padding-top: 5rem;
   align-items: center;
   height: 100%;
   width: 100%;
   gap: 2rem;
-  padding-top: 9rem;
+  // padding-top: 9rem;
   &__link {
     position: absolute;
-    top: 2rem;
+    top: 1rem;
     display: flex;
     justify-content: center;
     width: 100%;
     animation: moveIn 0.4s ease forwards;
     &__logo {
-      height: 100px;
+      height: 50px;
       transition: all 0.2s ease;
-      padding-right: 2rem;
+      padding-right: 1rem;
       &:hover {
         opacity: 0.8;
       }
@@ -187,23 +188,26 @@
   }
 }
 
-@media (min-height: 860px) {
+@media (min-height: 770px) {
   .timeline {
-    padding-top: 12rem;
+    justify-content: center;
+    padding-top: 0;
     &__link {
       &__logo {
-        height: 120px;
+        height: 80px;
+        padding-right: 1.5rem;
       }
     }
   }
 }
 
-@media (min-height: 920px) {
+@media (min-height: 850px) {
   .timeline {
-    padding-top: 14rem;
     &__link {
+      top: 2rem;
       &__logo {
-        height: 140px;
+        height: 100px;
+        padding-right: 2rem;
       }
     }
   }
