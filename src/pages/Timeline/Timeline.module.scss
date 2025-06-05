@@ -3,17 +3,23 @@
 .timeline {
   display: flex;
   flex-flow: column;
+  justify-content: start;
   align-items: center;
   height: 100%;
   width: 100%;
   gap: 2rem;
-  padding-top: 2rem;
+  padding-top: 9rem;
   &__link {
+    position: absolute;
+    top: 2rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
     animation: moveIn 0.4s ease forwards;
     &__logo {
-      height: 80px;
-      padding-right: 3rem;
+      height: 100px;
       transition: all 0.2s ease;
+      padding-right: 2rem;
       &:hover {
         opacity: 0.8;
       }
@@ -98,7 +104,7 @@
       color: var(--surface-0);
       font-family: "Special Gothic Expanded One", "Inter", sans-serif;
       font-weight: bold;
-      font-size: 1.5rem;
+      font-size: 1.25rem;
     }
   }
   &__buttons {
@@ -175,8 +181,30 @@
   }
 }
 
+@media (min-width: 400px) {
+  .timeline__date__text {
+    font-size: 1.5rem;
+  }
+}
+
 @media (min-height: 860px) {
-  .timeline__link__logo {
-    height: 120px;
+  .timeline {
+    padding-top: 12rem;
+    &__link {
+      &__logo {
+        height: 120px;
+      }
+    }
+  }
+}
+
+@media (min-height: 920px) {
+  .timeline {
+    padding-top: 14rem;
+    &__link {
+      &__logo {
+        height: 140px;
+      }
+    }
   }
 }
